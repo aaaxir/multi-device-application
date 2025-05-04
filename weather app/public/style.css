@@ -1,0 +1,139 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background and font */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #83a4d4, #b6fbff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Container styling */
+.container {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading styling */
+.container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Input styling */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #0099ff;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #0099ff, #007acc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #007acc, #005f99);
+}
+
+/* Weather result styling */
+#weatherResult {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+#weatherResult h2 {
+  color: #0099ff;
+  margin-bottom: 1rem;
+}
+
+.weather-icon {
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.details {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Error and loading states */
+#weatherResult p:only-child {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+/* Responsive for tablet and desktop */
+@media (min-width: 768px) {
+  .container {
+    padding: 3rem;
+    max-width: 500px;
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Responsive for very small devices */
+@media (max-width: 400px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
